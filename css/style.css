@@ -3,10 +3,13 @@
     box-sizing: border-box;
 }
 html{
-    width: 100%;
     height: 100%;
 }
 body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     font-family: "Public Sans", "Arial", sans-serif;
 
@@ -25,6 +28,8 @@ body {
     position: fixed;
     z-index: 99;
     width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
     background-color: #fff;
 }
 .container {
@@ -60,19 +65,26 @@ body {
 }
 
 .nav-list__link {
+    position: relative;
     display: inline-block;
-    padding-top: 32px;
-    padding-bottom: 26px;
     text-decoration: none;
+    font-size: 14px;
     line-height: 16px;
     letter-spacing: -0.107692px;
     color: #9597A5;
-    border-bottom: 4px solid #ffffff;
 }
 .nav-list__link:hover {
-    color: #000;
-    font-weight: 100;
-    border-bottom-color: #2AB6D9;
+    color: #2D314D;
+}
+.nav-list__link:hover::after{
+    position: absolute;
+    top: 42px;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
 }
 .header-inner__link--request {
     padding: 8px 32px;
@@ -133,9 +145,12 @@ body {
     width: 1300px;
     height: 1100px;
     position: absolute;
-    top: calc(50% - 900px);
-    right: calc(50% - 1200px);
+    top: calc(50% - 920px);
+    right: calc(50% - 1250px);
     z-index: 5;
+    background-image: url("../images/hero.bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* services  */
@@ -308,9 +323,8 @@ body {
     text-decoration: none;
     padding: 24px;
 }
-.articles-item__link:hover .articles-link__heading {
-    color: #9597A5;
-    opacity: 0.6;
+.articles-link__heading:hover {
+    color: #30C88F;
 }
 .articles-link__name {
     font-size: 10px;
@@ -401,8 +415,6 @@ body {
 .careers-list__link:hover {
     color: #30C88F;
 }
-.footer-wrapper__request {
-}
 .request-box {
     margin-left: auto;
     display: flex;
@@ -412,7 +424,6 @@ body {
 }
 .request-box__Link {
     margin-bottom: 14px;
-    opacity: 0.8;
 }
 .request-box__Link:hover {
     background: linear-gradient(135deg, #32D06A 0%, #80D5E0 99.58%);
