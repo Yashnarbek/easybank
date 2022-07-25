@@ -15,6 +15,16 @@ body {
 
 }
 
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
 @font-face {
     font-family: "Public Sans";
     font-weight: 100;
@@ -86,7 +96,7 @@ body {
     height: 4px;
     background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
 }
-.header-inner__link--request {
+.header-inner-request {
     padding: 8px 32px;
     font-weight: 500;
     text-decoration: none;
@@ -96,7 +106,7 @@ body {
     border-radius: 22px;
     color: #FFFFFF;
 }
-.header-inner__link--request:hover {
+.header-inner-request:hover {
     opacity: 0.6;
 }
 
@@ -139,6 +149,7 @@ body {
 .hero-box__link {
     padding-top: 16px;
     padding-bottom: 16px;
+    text-decoration: none;
 }
 
 .hero__img {
@@ -363,22 +374,22 @@ body {
     justify-content: space-between;
 }
 
-.footer-logo__list {
+.footer-logo-list {
     display: flex;
     align-items: center;
     margin: 0;
     padding-left: 0;
 }
-.footer-logo__item {
+.footer-logo-list__item {
     margin-right: 15px;
 }
-.footer-logo__link {
+.footer-logo-list__link {
     display: inline-block;
 }
-.footer-logo__link svg {
+.footer-logo-list__link svg {
     fill: #FFFFFF;
 }
-.footer-logo__item:hover .footer-logo__link svg {
+.footer-logo-list__item:hover .footer-logo-list__link svg {
     fill: #33D35E;
 }
 .about-list {
