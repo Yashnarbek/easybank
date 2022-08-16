@@ -325,7 +325,6 @@ body {
 .services-list {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     margin: 0;
     padding-left: 0;
@@ -438,9 +437,6 @@ body {
         letter-spacing: -0.234375px;
         color: #9597A5;        
     }
-    .services-list {
- 
-    }
     .services-list__item {
         display: flex;
         flex-direction: column;
@@ -469,10 +465,11 @@ body {
     color: #2D314D;
 }
 .articles-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
 }
 .articles-list__item {
     width: 255px;
@@ -548,7 +545,17 @@ body {
     letter-spacing: -0.203125px;
     color: #9597A5;
 }
-
+@media only screen and (max-width: 992px) {
+    .articles-section-top__header {
+        text-align: center;
+    }
+    .articles-list {
+        justify-content: space-around;
+    }
+    .articles-list__item {
+        margin-right: 0;
+    }
+}
 /* footer  */
 .site-footer {
     padding-top: 60px;
@@ -557,6 +564,7 @@ body {
 }
 .site-footer__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 .footer-wrapper__logo-box {
     display: flex;
@@ -640,3 +648,70 @@ body {
     mix-blend-mode: normal;
     opacity: 0.5;
 }
+.footer-wrapper__center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 992px) {
+    .footer-wrapper__request .header-inner-request {
+        display: block;
+    }
+    .site-footer__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer-wrapper {
+        width: 100%;
+    }
+    .footer-wrapper__about {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .careers-list {
+        margin: 0;
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .footer-wrapper__about {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+    .request-box {
+        margin-top: 100px;
+        margin-right: auto;
+    }
+}
+@media only screen and (max-width: 685px) {
+    .footer-wrapper__about {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+@media only screen and (max-width: 574px) {
+    .footer-wrapper__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .site-footer__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .careers-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .footer-logo-list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .request-box {
+        margin-top: 20px;
+    }
+} 
